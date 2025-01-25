@@ -2,10 +2,21 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "Take home assignment for FIYGE",
-  "main": "index.js",
+  "main": "app.ts",
   "scripts": {
+    "dev": "npx tsc && NODE_ENV=development nodemon dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jacky Yip",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.10"
+  }
 }
