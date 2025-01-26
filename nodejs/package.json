@@ -4,15 +4,27 @@
   "description": "Take home assignment for FIYGE",
   "main": "app.ts",
   "scripts": {
-    "dev": "npx tsc && NODE_ENV=development nodemon dist/app.js",
+    "dev": "NODE_ENV=development nodemon app.ts ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jacky Yip",
   "license": "ISC",
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.8",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
     "nodemon": "^3.1.9",
+    "sequelize": "^6.37.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
