@@ -191,7 +191,7 @@ function Canvas() {
             <Button
                 size="large"
                 onClick={onClickPreview}
-                style={{ marginRight: 8 }}
+                style={{ marginRight: 8, marginBottom: 16 }}
                 disabled={componentList.filter(component => component !== null).length === 0}
             >
                 Preview
@@ -201,6 +201,7 @@ function Canvas() {
                     variant="contained"
                     size="large"
                     onClick={onClickSave}
+                    style={{ marginBottom: 16 }}
                 >
                     Save
                 </Button>
@@ -209,6 +210,7 @@ function Canvas() {
                     variant="contained"
                     size="large"
                     onClick={onClickUpdate}
+                    style={{ marginBottom: 16 }}
                 >
                     Update
                 </Button>

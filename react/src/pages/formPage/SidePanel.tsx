@@ -182,7 +182,7 @@ function SidePanel() {
                 {sampleComponentList.map((component) => {
                     const { icon, label, element } = component
                     return (
-                        <Grid2 size={6}>
+                        <Grid2 size={{ xs: 12, md: 6 }}>
                             <InputComponentDraggable icon={icon} label={label} element={element}/>
                         </Grid2>
                     )
