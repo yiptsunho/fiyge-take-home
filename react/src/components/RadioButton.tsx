@@ -17,7 +17,7 @@ function RadioButton(props: RadioButtonProps) {
             <Label label={label} required={required} />
             <RadioGroup
                 defaultValue="female"
-                value={value}
+                // value={value}
                 row
             >
                 {options.map((option, index) => {

@@ -21,7 +21,7 @@ function CustomCheckbox(props: CheckboxProps) {
                     return (
                         <FormControlLabel
                             key={index}
-                            control={<Checkbox value={value} disabled={disabled} checked={value == Number(currentValue)}/>}
+                            control={<Checkbox disabled={disabled} />}
                             label={label}
                         />
                     )

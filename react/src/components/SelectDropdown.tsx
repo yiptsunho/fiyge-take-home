@@ -19,7 +19,7 @@ function SelectDropdown(props: SelectDropdownProps) {
             <FormControl fullWidth style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
                 <Label label={label} required={required} />
                 <Select
-                    value={value}
+                    defaultValue={value}
                     fullWidth
                     slotProps={{
                         input: {
