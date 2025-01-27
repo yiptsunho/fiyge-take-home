@@ -8,6 +8,7 @@ enum ErrorMessage {
     // formPage
     FORM_NAME_FORM_DATA_MANDATORY = "formName and formData are mandatory",
     DUPLICATE_FORM_ID = "duplicate id",
+    FORM_ID_RESPONSE = "formId and response are mandatory"
 }
 
 export default ErrorMessage;

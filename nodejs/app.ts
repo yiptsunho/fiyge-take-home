@@ -21,7 +21,7 @@ app.use(requestInterceptor)
 app.use("/api/doc", swaggerUI.serve, swaggerUI.setup(swaggerSpec))
 app.use("/api/health-check", HealthCheckRoute)
 app.use("/api/login", AuthRoute);
-app.use("/api/forms", requireAuthentication, FormRoute);
+app.use("/api/forms", FormRoute);
 app.use("/api/user", UserRoute);
 app.use(errorHandler)
 

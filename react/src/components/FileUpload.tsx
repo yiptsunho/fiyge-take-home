@@ -42,7 +42,7 @@ function FileUpload(props: FileUploadProps) {
                     type="file"
                     onChange={(event) => console.log(event.target.files)}
                     multiple
-                    value={value}
+                    value={typeof value == "string" ? value : undefined}
                 />
             </Button>
         </Fragment>

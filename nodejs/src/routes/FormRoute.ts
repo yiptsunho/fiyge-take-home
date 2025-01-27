@@ -1,6 +1,7 @@
 import express from "express"
 import formService from "../services/FormService";
 import {StatusCodes} from "http-status-codes";
+import requireAuthentication from "../middlewares/RequireAuthentication";
 
 const router = express.Router()
 
@@ -22,7 +23,7 @@ router.get("/:id", async (req, res, next) => {
     }
 })
 
-router.post("/save", async (req, res, next) => {
+router.post("/save", requireAuthentication, async (req, res, next) => {
     try {
         const result = await formService.createForm(req.body, req.cookies)
         res.status(StatusCodes.OK).json({
@@ -33,9 +34,20 @@ router.post("/save", async (req, res, next) => {
     }
 })
 
-router.put("/update/:id", async (req, res, next) => {
+router.put("/update/:id", requireAuthentication, async (req, res, next) => {
     try {
         const result = await formService.updateForm(req.params.id, req.body, req.cookies)
+        res.status(StatusCodes.OK).json({
+            data: result
+        })
+    } catch (err) {
+        next(err)
+    }
+})
+
+router.post("/response", async (req, res, next) => {
+    try {
+        const result = await formService.submitFormResponse(req.body)
         res.status(StatusCodes.OK).json({
             data: result
         })
