@@ -10,8 +10,9 @@ CREATE TABLE `form` (
 CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
   `display_name` varchar(45) DEFAULT NULL,
+  `role_id` varchar(45) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
