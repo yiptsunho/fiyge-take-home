@@ -18,6 +18,7 @@ import {
     TextInputComponentInterface
 } from "../../constants/Type.ts";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 type CanvasGridProps = {
     index: number;
@@ -91,8 +92,12 @@ function CanvasGrid(props: CanvasGridProps) {
                 </Box>
                 :
                 <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                    <AddCircleIcon fontSize="large" />
-                    {canDrop && "Drop here"}
+                    <AddCircleIcon fontSize="large" color="primary" />
+                    {canDrop &&
+                        <Typography variant="body1" color="black">
+                            Drop here
+                        </Typography>
+                    }
                     {/*Drop here*/}
                 </Box>
         }

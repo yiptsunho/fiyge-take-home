@@ -182,7 +182,7 @@ function LoginPage(props: { disableCustomTheme?: boolean }) {
         <AppTheme {...props}>
             <CssBaseline enableColorScheme />
             <SignInContainer direction="column" justifyContent="space-between">
-                <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
+                {/*<ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />*/}
                 <Card variant="outlined">
                     <SitemarkIcon />
                     <Typography
@@ -204,14 +204,14 @@ function LoginPage(props: { disableCustomTheme?: boolean }) {
                         }}
                     >
                         <FormControl style={{ alignItems: "start"}}>
-                            <FormLabel htmlFor="username">Email</FormLabel>
+                            <FormLabel htmlFor="username">Username</FormLabel>
                             <TextField
                                 // error={emailError}
                                 // helperText={emailErrorMessage}
                                 id="username"
                                 type="username"
                                 name="username"
-                                placeholder="your@email.com"
+                                placeholder="username"
                                 autoComplete="username"
                                 autoFocus
                                 required

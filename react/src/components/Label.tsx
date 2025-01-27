@@ -9,7 +9,7 @@ function Label(props: LabelProps) {
     const { label, required } = props
 
     return (
-        <Typography variant="h6" component="h2" mr={2} textAlign="start" whiteSpace="nowrap">
+        <Typography variant="h6" component="h2" mr={2} textAlign="start" color="black">
             {required && <span style={{ color: "red" }}>*</span>}{label}:
         </Typography>
     )
